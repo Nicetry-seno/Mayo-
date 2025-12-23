@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kenapa Jajan di Mayo Blok</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffd6e8;
+      font-family: "Comic Sans MS", "Poppins", sans-serif;
+    }
+
+    .card {
+      background: #fff0f7;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      width: 420px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4d88;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      position: relative;
+      height: 120px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #agree {
+      background: #ff66a3;
+      color: white;
+    }
+
+    #agree:hover {
+      background: #ff4d88;
+    }
+
+    #disagree {
+      background: #ffd1e3;
+      color: #ff3377;
+      position: absolute;
+      left: 180px;
+      top: 0;
+    }
+
+    .credit {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Kenapa Aku Jajan di Mayo 💖</h1>
+    <p>
+      Aku jajan di Mayo karena hidup butuh kebahagiaan, dan kebahagiaan itu
+      ketika dapat kode promo dari <b>minmayooo</b> WAHAHAHA 🤣<br><br>
+      Harganya juga kadang lebih murce (bahkan pernah <b>10.500 / 100 RBX</b> loh buat harga normalnya😭✨).
+      Sering ada event, adminnya juga ramah.<br><br>
+      Owner-nya baik banget, kelihatan peduli sama sekitar
+      (aku liat sendiri postingannya lagi bantu pembangunan kelas di SD 🫶)
+    </p>
+
+    <div class="buttons">
+      <button id="agree" onclick="alert('YEAY! Kamu resmi anak Mayo 😆💗')">
+        Setuju 💕
+      </button>
+      <button id="disagree">
+        Ga Setuju 😒
+      </button>
+    </div>
+
+    <div class="credit">
+      by @aysaa_II
+    </div>
+  </div>
+
+  <script>
+    const disagreeBtn = document.getElementById("disagree");
+
+    disagreeBtn.addEventListener("mouseenter", moveButton);
+    disagreeBtn.addEventListener("click", moveButton);
+
+    function moveButton() {
+      const x = Math.random() * 280;
+      const y = Math.random() * 90;
+      disagreeBtn.style.left = x + "px";
+      disagreeBtn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
